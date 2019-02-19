@@ -29,6 +29,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
     this.getProducts();
+    this.order.orderDetails.pop();
    
   }
 
@@ -46,7 +47,6 @@ export class ProductListComponent implements OnInit {
     this.orderDetail.amount = product.price;  
     this.orderDetail.quantity = 1;
     this.orderDetail.totalAmount = this.orderDetail.amount;
-   
     this.order.subTotal = this.calculateSubTotal(this.orderDetail.totalAmount);
     var copy = Object.assign({}, this.orderDetail)
     this.order.orderDetails.push(copy); 
@@ -69,7 +69,7 @@ export class ProductListComponent implements OnInit {
       updateItem.quantity +=1;
       updateItem.totalAmount = updateItem.quantity * updateItem.amount;
       //var copy = Object.assign({}, updateItem);
-      this.order.subTotal = this.calculateSubTotal(updateItem.totalAmount);
+      this.order.subTotal = this.calculateSubTotal(updateItem.amount);
       this.order.orderDetails[index] = updateItem;
     }
 
@@ -79,11 +79,7 @@ export class ProductListComponent implements OnInit {
   }
 
   private calculateSubTotal(amount: number) {
-    console.log("This", this.order.subTotal);
-    console.log("new", amount);
-
-    return 0;
-      //return this.order.subTotal + amount;
+    return this.order.subTotal + amount;
   }
 
 }

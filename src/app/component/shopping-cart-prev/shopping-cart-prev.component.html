@@ -1,11 +1,12 @@
 <h6 class="pb-2 mb-0">Your Cart</h6>
-<table class="table">
+<table class="table" *ngIf="items.orderDetails">
     <thead>
       <tr>
         <th scope="col">Name</th>
         <th scope="col">Price</th>
         <th scope="col">Qty</th>
         <th scope="col">Amount</th>
+        <th scope="col">Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -28,7 +29,7 @@
     <tfoot>
         <tr>
             <th scope="row">Totals</th>
-            <td>{{items.subTotal}}</td>
+            <td colspan="4">{{items.subTotal}}</td>
         </tr>
     </tfoot>
   </table>
