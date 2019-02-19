@@ -50,3 +50,19 @@ git remote add origin https://github.com/slider44/slider44.github.io.git
 ng build --prod
 
 npx angular-cli-ghpages --dir=dist/project-new --branch=master
+
+#STEPS TO PUSH CODE (LOCAL)
+
+git init .
+
+git remote add origin https://github.com/slider44/slider44.github.io.git
+
+(if has existing remote) git remote remove origin
+
+git checkout -b local (create new branch)
+
+git add .
+
+git commit -m "Message"
+
+git push origin local
