@@ -1,0 +1,35 @@
+<h6 class="pb-2 mb-0">Your Cart</h6>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Qty</th>
+        <th scope="col">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items.orderDetails">
+        <td>{{item.productName}}</td>
+        <td>{{item.amount}}</td>
+        <td>{{item.quantity}}</td>
+        <td>{{item.totalAmount}}</td>
+        <td>
+          <button (click)="delete(item)" class="btn btn-danger btn-sm">
+            <span class="fa fa-trash" aria-hidden="true"></span>
+          </button>
+          <div class="divider"> </div>
+          <button (click)="edit(item)" class="btn btn-primary btn-sm">
+              <span class="fa fa-edit" aria-hidden="true"></span>
+            </button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th scope="row">Totals</th>
+            <td>{{items.subTotal}}</td>
+        </tr>
+    </tfoot>
+  </table>
+

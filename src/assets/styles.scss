@@ -1,0 +1,86 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "~font-awesome/css/font-awesome.css";
+
+$bgColor: orange;
+
+.test {
+    background: #{$bgColor};
+}
+
+.header {
+    background: linear-gradient(to right, #f43b48 0%, #453a94 100%);
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1052;
+    height: 60px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #333;
+}
+
+body, html {
+    height: 100%;
+    background-repeat: no-repeat;
+    //background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+    background: #f3f3f3;
+}
+/**
+ * Profile image component
+ */
+.profile-header-container{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile-header-img {
+    padding: 54px;
+}
+
+.profile-header-img > img.img-circle {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #51D2B7;
+    border-radius: 50%;
+}
+
+.profile-header {
+    margin-top: 43px;
+}
+
+/**
+ * Ranking component
+ */
+.rank-label-container {
+    margin-top: -19px;
+    /* z-index: 1000; */
+    text-align: center;
+}
+
+.label.label-default.rank-label {
+    background-color: rgb(81, 210, 183);
+    padding: 5px 10px 5px 10px;
+    border-radius: 27px;
+}
+
+/**
+ * Data Table - Cart Component
+ */
+ /* You can add global styles to this file, and also import other style files */
+ .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+ /* ngAlert customization */
+ .app-level-alert {
+   padding-top: 10px;
+ }
+
+ .divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}

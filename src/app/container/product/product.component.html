@@ -1,0 +1,16 @@
+<div>
+    This is the parent
+</div>
+<div class="row">
+  <div class="col-md-6">
+      <div class="my-3 p-3 bg-white rounded box-shadow">
+          <app-product-list (selectItemEvent) = "forwardItemToParent($event)"></app-product-list>
+         
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="my-3 p-2 bg-white rounded box-shadow">
+           <app-shopping-cart-prev [order] = "globalData" ></app-shopping-cart-prev>
+          </div>
+      </div>
+</div>
